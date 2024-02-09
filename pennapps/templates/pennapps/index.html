@@ -18,10 +18,10 @@ Home Page
       </p><br>
     </div>
     <div class="congrats-message">
-      <p>Application Status: </p>
+      <p>Application Status: {{ application_status }}</p>
     </div>
     <div class="row">
-      <a href="" class="btn" style="margin: 0 auto; width: auto">Start Application</a>
+      <a href="/application/" class="btn" style="margin: 0 auto; width: auto">Start Application</a>
     </div>
     <div class="row">
       <div class="row" style="margin: 0 auto;">
@@ -30,7 +30,7 @@ Home Page
                   type="button"
                   value="Logout"
                   class="btn submit-button"
-                  onclick="location.href=''" />
+                  onclick="location.href='/logout/'" />
         </div>
       </div>
     </div>

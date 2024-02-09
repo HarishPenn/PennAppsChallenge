@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-sm-6 offset-sm-3">
 
-      <form action="/createUser" method="POST">
+      <form action="{% url 'signup' %}" method="POST">
         <div style="margin-bottom: -20px; margin-top: 30px;" class="title-wrapper">
           <h1 class="page-title">Sign Up</h1>
         </div>
@@ -28,14 +28,14 @@
           Please fill out this field with a valid email!
         </span>
         <span class="input">
-          <input type="text" name="firstName" class="input-field" required></input>
+          <input type="text" name="first_name" class="input-field" required></input>
           <label class="input-label"><span class="input-label-content">First Name</span></label>
         </span>
         <span id="firstName-error" class="hidden-error-message">
           Please fill out this field!
         </span>
         <span class="input">
-          <input type="text" name="lastName" class="input-field" required></input>
+          <input type="text" name="last_name" class="input-field" required></input>
           <label class="input-label"><span class="input-label-content">Last Name</span></label>
         </span>
         <span id="lastName-error" class="hidden-error-message">
@@ -44,7 +44,7 @@
 
         <form action="/action_page.php">
           <span class="input">
-            <input required type="password" id="password" name="password" class="input-field"
+            <input required type="password" id="password" name="password1" class="input-field"
                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                    ></input><label class="input-label">
@@ -64,7 +64,7 @@
           </span>
 
           <span class="input">
-            <input required type="password" id="confirmedPassword" name="confirmedPassword" class="input-field"></input>
+            <input required type="password" id="confirmedPassword" name="password2" class="input-field"></input>
             <label class="input-label"><span class="input-label-content">Confirm Password</span></label>
           </span>
           <span id="confirmedPassword-error" class="hidden-error-message">

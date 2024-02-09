@@ -14,7 +14,7 @@ const showError = (form, fieldName) => {
 };
 
 signupButton.onclick = () => {
-    const fields = ["username", "email", "firstName", "lastName", "password", "confirmedPassword"];
+    const fields = ["username", "email", "first_name", "last_name", "password1", "password2"];
     const form = document.forms[0]; //only one form so just get it
 
     const validations = fields.map(field => showError(form, field));
@@ -24,8 +24,8 @@ signupButton.onclick = () => {
     );
 
 
-    if (form["password"].value !== form["confirmedPassword"].value) {
-        const message = document.getElementById("confirmedPassword" + "-error");
+    if (form["password1"].value !== form["password2"].value) {
+        const message = document.getElementById("password2" + "-error");
         message.removeAttribute("class");
         message.setAttribute("class", "visible-error-message");
         validated = false;
